@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Design Portfolio</title>
+<link rel="stylesheet" href="public/css/style.css">
+<script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+</script>
+</head>
+<body">
+
+<!-- Dropdown menu with checkboxes -->
+<div class="dropdown">
+  <button class="dropbtn">Select Category</button>
+  <div class="dropdown-content">
+    <label><input type="checkbox" value="logos"> Business Logos</label>
+    <label><input type="checkbox" value="cards"> Business Cards</label>
+    <label><input type="checkbox" value="ads"> Business Ads</label>
+    <label><input type="checkbox" value="flyers"> Business Flyers</label>
+    <label><input type="checkbox" value="posters"> Business Posters</label>
+    <!-- Add more categories as needed -->
+  </div>
+</div>
+
+<!-- Project images grid -->
+<div class="gallery" id="gallery">
+  <!-- Images will be dynamically added here -->
+</div>
+
+<!-- Modal container -->
+<div id="myModal" class="modal">
+  <span id="close-modal" class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+
+<script src="public/js/script.js"></script>
+</body>
+</html>
