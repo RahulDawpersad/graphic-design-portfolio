@@ -21,6 +21,9 @@ checkboxes.forEach(function (checkbox) {
         var category = chk.value;
         // Add images or videos based on the selected category
         switch (category) {
+          case "websites":
+            addTemplate("public/img", "Website Template 1");
+            break;
           case "logos":
             addTemplate("public/img/logos/logo1.png", "Business Logo 1");
             addTemplate("public/img/logos/logo2.png", "Business Logo 2");
@@ -41,25 +44,22 @@ checkboxes.forEach(function (checkbox) {
             addTemplate("public/img/cards/card4.png", "Business Card 4");
             addTemplate("public/img/cards/card5.png", "Business Card 5");
             addTemplate("public/img/cards/card6.png", "Business Card 6");
-
-            // Add more business card templates
             break;
           case "ads":
-            addTemplate("public/img/ads/logo8.mp4", "Business Video 1", true); // true flag indicates it's a video
-            addTemplate("public/img/ads/video2.mp4", "Business Video 2", true);
-            // Add more video ad templates
+            // addTemplate("public/img/ads/logo8.mp4", "Business Video 1", true); 
+            // addTemplate("public/img/ads/video2.mp4", "Business Video 2", true);
             break;
           case "flyers":
             addTemplate("https://via.placeholder.com/300", "Business Flyer 1");
             addTemplate("https://via.placeholder.com/300", "Business Flyer 2");
-            // Add more flyer templates
             break;
           case "posters":
-            addTemplate("https://via.placeholder.com/300", "Business Poster 1");
-            addTemplate("https://via.placeholder.com/300", "Business Poster 2");
-            // Add more poster templates
+            addTemplate("public/img/poster/poster1.png", "Business Poster 1");
+            addTemplate("public/img/poster/poster2.png", "Business Poster 2");
+            addTemplate("public/img/poster/poster3.png", "Business Poster 3");
+            addTemplate("public/img/poster/poster4.png", "Business Poster 4");
+            addTemplate("public/img/poster/poster5.png", "Business Poster 4");
             break;
-          // Add more cases for additional categories
         }
       }
     });
