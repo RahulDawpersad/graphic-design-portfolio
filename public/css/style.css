@@ -1,8 +1,31 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: auto;
+}
+
+.landing-wrapper{
+  display: grid;
+  place-items: center;
+}
+
+.landing-wrapper p{
+  font-size: 1.2em;
+  color: #928d8d;
+  font-weight: normal;
+  margin: 1.7em 0;
+}
+
 /* Dropdown styling */
 .dropdown {
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: 20px 38em;
   }
   
   .dropbtn {
@@ -44,7 +67,7 @@
   .project-img {
     width: 100%;
     /* height: auto; */
-    height: 300px;
+    height: auto;
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   }
@@ -86,4 +109,39 @@
     color: #f44336;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 700px){
+    .landing-wrapper p{
+      font-size: 1em;
+      width: 350px;
+    }
+
+    .landing-wrapper .svg{
+      height: 200px;
+      width: 200px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 20px 7em;
+    }
+    .dropdown-content {
+      min-width: 190px;
+      margin-left: -1.7em;
+    }
+  }
+
+  @media only screen and (max-width: 1024px){
+    .landing-wrapper p{
+      font-size: 1em;
+      width: 350px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 20px 7em;
+    }
   }

@@ -11,14 +11,13 @@
     event.preventDefault();
   });
 </script>
-</style>
 </head>
 <body>
-    <div class="main-container">
-      
+
+<div class="main-container">
+   
   <div class="landing-wrapper">
     <p>Feel Free To Explore My Portfolio Of Designs And Websites</p>
-    <img src="public/img/websites/SVG.gif" class="svg" alt="svg">
   </div>
 
 <!-- Dropdown menu with checkboxes -->
@@ -45,8 +44,11 @@
   <span id="close-modal" class="close">&times;</span>
   <img class="modal-content" id="modal-img">
 </div>
+</div>
 
-    </div>
+
+
+
 <script src="public/js/script.js"></script>
 </body>
 </html>

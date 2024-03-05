@@ -1,3 +1,7 @@
+document.getElementById('icon').addEventListener('click', function(){
+  window.location.href = 'index.html';
+})
+
 /*===== MIXITUP FILTER PORTFOLIO =====*/
 var containerEl = document.querySelector(".portfolio__container");
 if (containerEl) {

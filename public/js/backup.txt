@@ -20,6 +20,10 @@ checkboxes.forEach(function (checkbox) {
         // Get the value of the checked checkbox
         var category = chk.value;
         // Add images or videos based on the selected category
+        if (checkbox.checked && category === "websites") {
+          // Redirect to website.html if "websites" checkbox is checked
+          window.location.href = "websites.html";
+        }
         switch (category) {
           case "websites":
             addTemplate("public/img", "Website Template 1");

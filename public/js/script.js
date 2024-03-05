@@ -25,9 +25,9 @@ checkboxes.forEach(function (checkbox) {
           window.location.href = "websites.html";
         }
         switch (category) {
-          // case "websites":
-          //   addTemplate("public/img/websites/designx-website.png", "Website Template 1", 'https://www.rahuldawpersad.com');
-          //   break;
+          case "websites":
+            addTemplate("public/img", "Website Template 1");
+            break;
           case "logos":
             addTemplate("public/img/logos/logo1.png", "Business Logo 1");
             addTemplate("public/img/logos/logo2.png", "Business Logo 2");
@@ -70,29 +70,30 @@ checkboxes.forEach(function (checkbox) {
   });
 });
 
-// Function to add template image to gallery along with hosted link
-function addTemplate(src, alt, hostedLink) {
-  var template = document.createElement('div');
-  template.classList.add('template-container');
-
-  var img = document.createElement('img');
-  img.src = src;
-  img.alt = alt;
-  img.classList.add('project-img');
-  // img.addEventListener('click', function() {
-  //   window.open(hostedLink, '_blank');
-  // });
-
-  var link = document.createElement('a');
-  link.href = hostedLink;
-  link.textContent = "View Website";
-  link.target = "_blank";
-  link.classList.add('template-link');
-
-  template.appendChild(img);
-  // template.appendChild(link);
-
-  gallery.appendChild(template);
+// Function to add template image or video to gallery
+function addTemplate(src, alt, isVideo = false) {
+  if (isVideo) {
+    var video = document.createElement('video');
+    video.src = src;
+    video.alt = alt;
+    video.classList.add('project-video');
+    video.setAttribute('controls', 'true');
+    video.addEventListener('click', function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+    gallery.appendChild(video);
+  } else {
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.classList.add('project-img');
+    img.addEventListener('click', function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+    gallery.appendChild(img);
+  }
 }
 
 // Close modal when the close button is clicked
