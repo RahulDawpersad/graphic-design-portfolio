@@ -40,6 +40,7 @@ checkboxes.forEach(function (checkbox) {
             addTemplate("public/img/logos/logo5.png", "Business Logo 9");
             addTemplate("public/img/logos/logo15.jpg", "Business Logo 10");
             addTemplate("public/img/logos/logo16.jpg", "Business Logo 11");
+            addTemplate("public/img/logos/Gums&Bums.jpg", "Business Logo 12");
             break;
           case "cards":
             addTemplate("public/img/cards/card1.png", "Business Card 1");
